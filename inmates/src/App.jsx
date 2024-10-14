@@ -1,4 +1,6 @@
 import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import SignUp from "./sign_up";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/home";
 import Collection from "./pages/Collection";
@@ -16,6 +18,8 @@ const App = () => {
     <div className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] bg-black">
       <Navbar></Navbar>
       <Routes>
+        <Route path="/signup" element={<SignUp/>}></Route>
+        <Route path="/login" element={<LogIn/>}></Route>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/collection" element={<Collection></Collection>}></Route>
         <Route path="/about" element={<About></About>}></Route>
